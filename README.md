@@ -31,7 +31,43 @@ Displaced shoulder/hip alignment.
 
 Inverted limb rotation inconsistent with any vertebrate body plan.
 
-When the same process was applied to a horse reference (Fig. 2), models preserved correct leg count and orientation even with motion blur or overlap.
+
+[Example Gecko inputs and outputs]
+
+<p align="center">
+  <img src="./images/gecko_concept.jpg" width="30%"/>
+  <img src="./images/real_gecko_bottom.jpg" width="30%"/>
+  <img src="./images/real_gecko_top.jpg" width="30%"/>
+</p>
+
+<p align="center"><em>Fig. 1 – Comparison of Gecko Variants</em></p>
+
+<p align="center">
+  <img src="./examples/AI_Incorrect_Gecko_1.png" width="30%"/>
+  <img src="./examples/AI_Incorrect_Gecko_2.png" width="30%"/>
+</p>
+
+<p align="center"><em>Fig. 2 – AI Generations Variants</em></p>
+
+
+When the same process was applied to a horse reference, models preserved correct leg count and orientation even with motion blur or overlap.
+
+[Example of Horse inputs and outputs]
+
+<p align="center">
+  <img src="./images/horse_ref_01.jpg" width="30%"/>
+</p>
+
+<p align="center"><em>Fig. 1 – Comparison Horse Variants</em></p>
+
+<p align="center">
+  <img src="./examples/AI_Horse_Gen_1.png" width="30%"/>
+  <img src="./examples/AI_Horse_Gen_2.png" width="30%"/>
+</p>
+
+<p align="center"><em>Fig. 2 – AI Generations</em></p>
+
+
 This difference prompted deeper investigation into why the anatomical integrity of common mammals holds, while reptiles degrade.
 
 3. Root Causes
@@ -81,12 +117,6 @@ By contrast, “reptile” is a soft manifold contaminated with artistic and hyb
 Inject a pose or skeleton conditioning channel (e.g., via OpenPose or DensePose) into the denoising process.
 This provides explicit spatial anchors that prevent spurious limb formation.
 
-[Fig. 1 – Gecko Reference vs. AI Output]
-
-![Gecko comparison](./images/gecko_concept.jpg)
-![Gecko comparison](./images/real_gecko_bottom.png)
-![Gecko comparison](./images/real_gecko_top.jpg)
-
 
 5.2 Body-Plan Validation Module
 
@@ -99,9 +129,6 @@ Detect connected appendages via contour or skeletonization.
 Compare to species template (e.g., vertebrate = 4 limbs).
 
 Flag or discard anomalies automatically.
-
-[Fig. 2 – Validation Pipeline Diagram]
-(Placeholder: shows segmentation, limb detection, and comparison stages)
 
 5.3 Hierarchical Anatomical Embedding
 
